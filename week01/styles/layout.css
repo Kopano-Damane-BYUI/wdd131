@@ -1,0 +1,98 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body setup: use grid for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    /* Header, Main Content, Footer */
+    grid-template-columns: 1fr;
+    /* Single column layout for the whole page */
+    height: 100vh;
+    /* Full viewport height */
+    max-width: 950px;
+    /* Set max width for the body */
+    margin: 0 auto;
+    /* Center the body horizontally */
+}
+
+/* Header Styling (Horizontal with Header Content Above Nav) */
+header {
+    width: 100%;
+}
+
+/* Header content styling with background color */
+.header-content {
+    background-color: #444;
+    /* Choose a background color for the header content */
+    color: white;
+    padding: 20px;
+    /* Center the header content */
+}
+
+.header-content h1 {
+    margin: 0;
+}
+
+/* Navigation menu styling with Flexbox (Full width, equally spaced items) */
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* Space between the navigation items */
+    width: 100%;
+    /* Make the nav span the full width */
+    padding: 0 20px;
+    /* Add horizontal padding inside the nav */
+    background-color: #333;
+    /* Keep the original background color for the nav */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    flex: 1;
+    /* Ensures equal space between nav items */
+}
+
+nav a:hover {
+    background-color: #ff6347;
+    color: white;
+}
+
+/* Main content and sidebar layout using Flexbox */
+main {
+    display: flex;
+}
+
+/* Main content takes more space */
+.main-content {
+    background-color: #f4f4f4;
+    flex: 3;
+    /* Main content takes more space */
+    padding: 20px;
+}
+
+/* Sidebar takes less space */
+.sidebar {
+    background-color: #e4e4e4;
+    flex: 1;
+    /* Sidebar takes less space */
+    padding: 20px;
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
