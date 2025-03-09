@@ -1,0 +1,220 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* General body styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #004d40;
+    /* Teal background */
+    color: #ffffff;
+    padding: .1px 0 0;
+    /* Remove bottom padding */
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Navigation Menu Styling using Flexbox */
+nav {
+    background-color: #121212;
+    /* Darker teal background */
+    width: 100%;
+    /* Ensure it spans the whole width */
+    display: flex;
+    justify-content: space-around;
+    /* Space out links evenly */
+    padding: 0.5rem 0;
+    box-sizing: border-box;
+    margin: 0;
+    /* Remove any margins */
+}
+
+/* Navigation Link Styling */
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #C5E7E4;
+    /* Slightly darker on hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #004d40;
+    /* Same as header */
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p:last-child {
+    color: #DAF1EE;
+    /* Light greenish color */
+}
+
+/* Card Layout - New Styles */
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Individual Card Styling */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    /* Cards take up 45% of the width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Titles */
+.card h2 {
+    font-size: 1.6em;
+    color: #333;
+    /* Darker color for better contrast */
+}
+
+/* Image Styling Inside Cards */
+.card .south-africa img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Figure and Caption for South Africa Section */
+.card .south-africa figure {
+    text-align: center;
+    margin: 37px 22px 37px;
+}
+
+/* General Card Text */
+.card p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Card Titles */
+.card h2 {
+    text-align: center;
+    font-size: 1.6em;
+    color: #ffffff;
+    background-color: #00796b;
+    /* Same background color as the navigation */
+    padding: 1rem;
+    /* Add padding for spacing around the text */
+    margin: 0;
+    /* Remove default margin */
+    border-radius: 8px 8px 0 0;
+    /* Rounded corners on the top */
+    width: 100%;
+    /* Ensure it spans the full width of the card */
+    box-sizing: border-box;
+    /* Make sure padding is included in the width */
+}
+
+/* Left Card - 60% Width */
+.card-left {
+    background-color: #ffffff;
+    width: 70%;
+    /* Left card takes up 60% of the container width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Card - 20% Width */
+.card-right {
+    background-color: #ffffff;
+    width: 27%;
+    /* Right card takes up 20% of the container width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Set the section to display flex */
+.card-left .about-content {
+    display: flex;
+    /* Space between paragraph and image */
+    align-items: center;
+    /* Vertically align the items */
+    margin: 18px 30px 0 17px;
+}
+
+/* Adjust the paragraph and the image in about-content */
+.card-left .about-content p {
+    flex: 1;
+    /* Let the paragraph take up the remaining space */
+    margin-right: 1px;
+    /* Add some space between the paragraph and the image */
+}
+
+.card-left .about-content img {
+    width: 7rem;
+    /* Set a max width for the image */
+    height: auto;
+    border: 1px solid black;
+}
+
+.south-africa {
+    display: grid;
+    grid-template-columns: .5fr 1fr .3fr;
+    /* Two equal columns */
+    grid-template-rows: auto;
+    /* Automatically adjust row height */
+}
+
+.south-africa h3 {
+    grid-column: span 2;
+    /* Make h3 span across both columns */
+    text-align: center;
+    /* Optional: center the heading */
+    font-size: 1.5rem;
+    border-bottom: 1px solid black;
+    width: 75%;
+    margin: -6px auto;
+}
+
+.south-africa figure {
+    grid-column: 1 / 2;
+    /* Place figure in the first column */
+}
+
+.south-africa p {
+    grid-column: 2 / 3;
+    /* Place paragraph in the second column */
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+ul {
+    padding-top: 35%;
+}
