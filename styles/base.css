@@ -19,10 +19,8 @@ body {
 /* Header Styling */
 header {
     background-color: #004d40;
-    /* Teal background */
     color: #ffffff;
     padding: .1px 0 0;
-    /* Remove bottom padding */
     width: 100%;
     box-sizing: border-box;
     text-align: center;
@@ -31,16 +29,14 @@ header {
 /* Navigation Menu Styling using Flexbox */
 nav {
     background-color: #121212;
-    /* Darker teal background */
     width: 100%;
-    /* Ensure it spans the whole width */
     display: flex;
     justify-content: space-around;
-    /* Space out links evenly */
     padding: 0.5rem 0;
     box-sizing: border-box;
     margin: 0;
-    /* Remove any margins */
+    flex-wrap: wrap;
+    /* Added flex-wrap for smaller screens */
 }
 
 /* Navigation Link Styling */
@@ -50,18 +46,35 @@ nav a {
     padding: 0.5rem 1rem;
     font-weight: bold;
     display: inline-block;
-    transition: background-color 0.3s;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Navigation */
+nav a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: #00796b;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover::before {
+    width: 25%;
+    left: 50%;
 }
 
 nav a:hover {
-    background-color: #C5E7E4;
-    /* Slightly darker on hover */
+    color: #ffffff;
 }
 
 /* Footer Styling */
 footer {
     background-color: #004d40;
-    /* Same as header */
     color: #ffffff;
     text-align: center;
     padding: 1rem;
@@ -76,7 +89,6 @@ footer p {
 
 footer p:last-child {
     color: #DAF1EE;
-    /* Light greenish color */
 }
 
 /* Card Layout - New Styles */
@@ -85,6 +97,8 @@ footer p:last-child {
     justify-content: space-between;
     padding: 2rem;
     box-sizing: border-box;
+    flex-wrap: wrap;
+    /* Allows wrapping on smaller screens */
 }
 
 /* Individual Card Styling */
@@ -93,13 +107,14 @@ footer p:last-child {
     border-radius: 8px;
     /* Cards take up 45% of the width */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    /* Space between cards */
 }
 
 /* Card Titles */
 .card h2 {
     font-size: 1.6em;
     color: #333;
-    /* Darker color for better contrast */
 }
 
 /* Image Styling Inside Cards */
@@ -127,17 +142,11 @@ footer p:last-child {
     font-size: 1.6em;
     color: #ffffff;
     background-color: #00796b;
-    /* Same background color as the navigation */
     padding: 1rem;
-    /* Add padding for spacing around the text */
     margin: 0;
-    /* Remove default margin */
     border-radius: 8px 8px 0 0;
-    /* Rounded corners on the top */
     width: 100%;
-    /* Ensure it spans the full width of the card */
     box-sizing: border-box;
-    /* Make sure padding is included in the width */
 }
 
 /* Left Card - 60% Width */
@@ -146,6 +155,27 @@ footer p:last-child {
     width: 70%;
     /* Left card takes up 60% of the container width */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-left .about-content {
+    display: flex;
+    align-items: center;
+    /* Space between paragraph and image */
+    margin: 18px 30px 0 17px;
+}
+
+.card-left .about-content p {
+    flex: 1;
+    /* Let the paragraph take up the remaining space */
+    margin-right: 1px;
+    /* Add some space between the paragraph and the image */
+}
+
+.card-left .about-content img {
+    width: 7rem;
+    /* Set a max width for the image */
+    height: auto;
+    border: 1px solid black;
 }
 
 /* Right Card - 20% Width */
@@ -183,16 +213,12 @@ footer p:last-child {
 .south-africa {
     display: grid;
     grid-template-columns: .5fr 1fr .3fr;
-    /* Two equal columns */
     grid-template-rows: auto;
-    /* Automatically adjust row height */
 }
 
 .south-africa h3 {
     grid-column: span 2;
-    /* Make h3 span across both columns */
     text-align: center;
-    /* Optional: center the heading */
     font-size: 1.5rem;
     border-bottom: 1px solid black;
     width: 75%;
@@ -201,20 +227,114 @@ footer p:last-child {
 
 .south-africa figure {
     grid-column: 1 / 2;
-    /* Place figure in the first column */
 }
 
 .south-africa p {
     grid-column: 2 / 3;
-    /* Place paragraph in the second column */
+    padding: 10px;
+    /* Add padding to give space around the paragraph */
+    border-radius: 5px;
 }
 
-figcaption {
-    font-style: italic;
-    font-size: 12px;
-    margin-top: 10px;
-}
-
+/* Adjust the padding-top for the ul list on smaller screens */
 ul {
-    padding-top: 35%;
+    padding-top: 0;
+    /* Remove the top padding */
+    margin-left: 0;
+    /* Align list items to the left */
+}
+
+/* Mobile responsiveness (for screen widths 768px or smaller) */
+@media (max-width: 768px) {
+
+    /* Card layout on smaller screens */
+    .card-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .card {
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+
+    .card h2 {
+        font-size: 1.4em;
+    }
+
+    .card-left .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card-left .about-content p {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .card-left .about-content img {
+        width: 50%;
+        margin-bottom: 1rem;
+    }
+
+    .south-africa {
+        display: block;
+    }
+
+    .south-africa figure {
+        margin-bottom: 1rem;
+    }
+
+    .south-africa p {
+        margin-bottom: 1rem;
+    }
+
+    .south-africa h3 {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 1rem 0;
+    }
+
+    /* Style adjustments for ul on small screens */
+    ul {
+        padding-top: 0;
+        /* Removes top padding */
+        margin-left: 0;
+        /* Align the list to the left */
+    }
+
+    /* List items inside ul */
+    ul li {
+        text-align: left;
+        /* Aligning text left instead of center */
+    }
+
+    /* Adjustments for the paragraph inside .south-africa */
+    .south-africa p {
+        margin: 1rem;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
+
+/* Extra small devices (for screen widths 480px or smaller) */
+@media (max-width: 480px) {
+    .card h2 {
+        font-size: 1.2em;
+    }
+
+    .south-africa h3 {
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
 }
