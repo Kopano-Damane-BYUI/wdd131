@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131: Picture Album | Kopano Damane</title>
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals page featuring a picture Album of Kopano Damane">
+    <meta name="author" content="Kopano Damane">
+    <!-- Link to external CSS files -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+
+    <!--use the Google Fonts API service-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Reference to JavaScript file with defer attribute -->
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <p>Temple Album</p>
+        <nav>
+            <!-- Hamburger Button -->
+            <button id="hamburger" aria-label="Toggle Navigation">&#9776;</button>
+            <ul id="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Home</h1>
+        <!-- Example images for the picture album -->
+        <div class="image-gallery">
+            <figure>
+                <a href=""><img src="images/South-Africa-Cape-Town-Temple.jpg" alt="Cape Town South Africa Temple"></a>
+                <figcaption>Cape Town South Africa Temple</figcaption>
+            </figure>
+            <figure>
+                <a href=""><img src="images/Durban-South-Africa-Temple-Rendering.jpg"
+                        alt="Durban South Africa Temple"></a>
+                <figcaption>Durban South Africa Temple</figcaption>
+            </figure>
+            <figure>
+                <a href=""><img src="images/johannesburg_south_africa_temple_lds.jpg"
+                        alt="Johannesburg South Africa Temple"></a>
+                <figcaption>Johannesburg South Africa Temple</figcaption>
+            </figure>
+            <figure>
+                <a href=""><img src="images/kirtland-temple-tours-3.jpg" alt="Kirtland Temple"></a>
+                <figcaption>Kirtland Temple</figcaption>
+            </figure>
+            <figure>
+                <a href=""><img src="images/hong_kong_taiwan_temple_lines.jpg" alt="Hong Kong Taiwan Temple"></a>
+                <figcaption>Hong Kong Taiwan Temple</figcaption>
+            </figure>
+            <figure>
+                <a href=""><img src="images/memphis_tennessee_temple_exterior.jpg" alt="Memphis Tennessee Temple"></a>
+                <figcaption>Memphis Tennessee Temple</figcaption>
+            </figure>
+            <figure>
+                <a href=""><img src="images/Gilbert-Arizona-Temple4.jpg" alt="Gilbert Arizona Temple"></a>
+                <figcaption>Gilbert Arizona Temple</figcaption>
+            </figure>
+            <figure>
+                <a href=""><img src="images/Birmingham-England-Temple-Rendering.jpg"
+                        alt="Birmingham England Temple"></a>
+                <figcaption>Birmingham England Temple</figcaption>
+            </figure>
+            <figure>
+                <a href=""><img src="images/oaxaca_mexico_temple.jpg" alt="Oaxaca Mexico Temple"></a>
+                <figcaption>Oaxaca Mexico Temple</figcaption>
+            </figure>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🌐 Kopano Damane, 🏘️ South Africa, Cape Town</p>
+        <p>Last modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
