@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W03 Assignment: Country Page</title>
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals page featuring the information about a place that I would like to visit one day.">
+    <meta name="author" content="Kopano Damane">
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles/place.css">
+
+    <!-- Reference to JavaScript file with defer attribute -->
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Honolulu Island Hawaii</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-Hawaii-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/hero-Hawaii-medium.webp" media="(min-width: 500px)">
+                <img src="images/hero-Hawaii-small.webp" alt="Hawaii Beach view" width="500" height="250">
+            </picture>
+        
+            <!-- Data Section (Top Left Corner) -->
+            <div class="data">
+                <h2>Data</h2>
+                <ul>
+                    <li>Area : 1,897.0 km²</li>
+                    <li>Population : 349,000 (2020 estimate)</li>
+                    <li>Capital : Honolulu</li>
+                    <li>Languages : English, Hawaiian</li>
+                    <li>Currency : United States Dollar (USD)</li>
+                    <li>Time Zone : Hawaii-Aleutian Standard Time (HST)</li>
+                    <li>Calling Code : +1 (808)</li>
+                    <li>Internet LTD : .us</li>
+                </ul>
+            </div>
+        
+            <!-- Weather Section (Bottom Right Corner) -->
+            <div class="weather">
+                <h2>Weather <img src="images/weather_clouds_sun_sunny_icon.svg" alt="I weather icon"></h2>
+                <ul>
+                    <li>Temperature : 26°C</li>
+                    <li>Conditions : Tropical, humid with mild winters</li>
+                    <li>Wind : 15 km/h</li>
+                    <li class="windChill">Wind Chill : </li> <!-- Will be dynamically filled by JavaScript -->
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>
+            &copy;<span id="currentyear"></span> 🌐 Kopano Damane, 🏘️ South Africa, Cape Town
+        </p>
+        <p>Last modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
