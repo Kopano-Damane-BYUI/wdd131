@@ -119,6 +119,13 @@ picture img {
     margin-bottom: 8px;
 }
 
+/* Weather Emoticon Styling */
+.weather-emoticon {
+    display: none;
+    font-size: 1.5em;
+    margin-right: 8px;
+}
+
 /* Footer Styling */
 footer {
     text-align: center;
@@ -143,7 +150,6 @@ footer {
     /* Ensures it scrolls with content */
 }
 
-/* Media Queries */
 /* Media Queries */
 @media (max-width: 768px) {
     .hero {
@@ -193,6 +199,30 @@ footer {
         margin-left: auto;
         /* Centers the image horizontally */
         margin-right: auto;
+    }
+
+    /* Hide the weather emoticon on smaller screens */
+    .weather-emoticon {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+
+    /* Show the "Weather" text and emoticon only on larger screens (desktop view) */
+    .weather-emoticon {
+        display: inline-block;
+        font-size: 1.5em;
+        margin-right: 8px;
+    }
+
+    .weather h2 {
+        display: inline-block;
+    }
+
+    /* Hide the weather image on desktop view */
+    .weather img {
+        display: none;
     }
 }
 

@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W03 Assignment: Country Page</title>
     <meta name="description"
-        content="WDD 131 – Dynamic Web Fundamentals page featuring the information about a place that I would like to visit one day.">
+        content="WDD 131 – Dynamic Web Fundamentals page featuring information about a place I would like to visit.">
     <meta name="author" content="Kopano Damane">
 
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="styles/place.css">
 
-    <!--use the Google Fonts API service-->
+    <!-- Use the Google Fonts API service -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
@@ -32,31 +32,35 @@
                 <source srcset="images/hero-Hawaii-medium.webp" media="(min-width: 500px)">
                 <img src="images/hero-Hawaii-small.webp" alt="Hawaii Beach view" width="500" height="250">
             </picture>
-        
+
             <!-- Data Section (Top Left Corner) -->
             <div class="data">
                 <h2>Data</h2>
                 <ul>
-                    <li>Area : 1,897.0 km²</li>
-                    <li>Population : 349,000 (2020 estimate)</li>
-                    <li>Capital : Honolulu</li>
-                    <li>Languages : English, Hawaiian</li>
-                    <li>Currency : United States Dollar (USD)</li>
-                    <li>Time Zone : Hawaii-Aleutian Standard Time (HST)</li>
-                    <li>Calling Code : +1 (808)</li>
-                    <li>Internet LTD : .us</li>
+                    <li>Area: 1,897.0 km²</li>
+                    <li>Population: 349,000 (2020 estimate)</li>
+                    <li>Capital: Honolulu</li>
+                    <li>Languages: English, Hawaiian</li>
+                    <li>Currency: United States Dollar (USD)</li>
+                    <li>Time Zone: Hawaii-Aleutian Standard Time (HST)</li>
+                    <li>Calling Code: +1 (808)</li>
+                    <li>Internet LTD: .us</li>
                 </ul>
             </div>
-        
             <!-- Weather Section (Bottom Right Corner) -->
             <div class="weather">
-                <h2>Weather <img src="images/weather_clouds_sun_sunny_icon.svg" alt="I weather icon"></h2>
+                <h2>
+                    Weather
+                    <span class="weather-emoticon">⛅</span>
+                    <!-- Weather icon, hidden on desktop -->
+                    <img class="weather-icon" src="images/weather_clouds_sun_sunny_icon.svg" alt="Weather icon">
+                </h2>
                 <ul>
-                    <li>Temperature : 26°C</li>
-                    <li>Conditions : Tropical, humid with mild winters</li>
-                    <li>Wind : 15 km/h</li>
-                    <li class="windChill">Wind Chill : </li> <!-- Will be dynamically filled by JavaScript -->
-                </ul>
+                    <li>Temperature: 26°C (78.8°F)</li>
+                    <li>Conditions: Tropical, humid with mild winters</li>
+                    <li>Wind: 15 km/h</li>
+                    <li class="windChill">Wind Chill: </li> <!-- Will be dynamically filled by JavaScript -->
+                </ul> 
             </div>
         </div>
     </main>
