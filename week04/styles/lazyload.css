@@ -1,0 +1,65 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Makes sure content and footer are spaced apart */
+    min-height: 100vh;
+    /* Ensures full height of the viewport */
+    background-color: #f0f0f0;
+}
+
+/* Main content */
+main {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style for the images */
+img {
+    width: 400px;
+    height: 600px;
+    /* Maintain the height requirement */
+    margin-bottom: 20px;
+    display: block;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Fade-in animation for images */
+img.loaded {
+    opacity: 1;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    /* Keeps the footer at the bottom */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Footer links */
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
