@@ -1,0 +1,206 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    /* Use Google Fonts Roboto */
+}
+
+/* Header */
+header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul {
+    display: flex;
+    gap: 3rem;
+    margin: 0;
+    list-style-type: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    /* Apply Roboto to navigation items */
+}
+
+/* Hamburger Button */
+#hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 2rem 2rem 0;
+}
+
+figure {
+    margin: 0;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Adding hover effect for cards */
+figure:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+figcaption {
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+figcaption h3 {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+figcaption p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.3rem 0;
+}
+
+/* Hover effect for images */
+img:hover {
+    transform: scale(1.05);
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Centering the heading (h2) */
+main h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+    font-family: 'Roboto', sans-serif;
+    /* Apply Roboto to the heading */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr 50px;
+    }
+
+    nav {
+        justify-content: flex-start;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 1rem;
+        z-index: 10;
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
+
+    #nav-links li {
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+
+    #nav-links li a {
+        padding: 1rem;
+        text-align: center;
+        display: block;
+    }
+
+    #nav-links li:hover {
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .image-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Styling for :hover on navigation anchor links */
+ul li a:hover {
+    text-decoration: underline;
+    color: #f1f1f1;
+}

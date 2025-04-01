@@ -1,0 +1,59 @@
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr .2fr;
+        /* Stack the two columns on smaller screens */
+    }
+
+    nav {
+        justify-content: center;
+        /* Center the nav links */
+    }
+
+    #hamburger {
+        display: block;
+        /* Show hamburger on smaller screens */
+    }
+
+    ul {
+        gap: 0;
+        margin: 0;
+    }
+
+    #nav-links {
+        display: none;
+        /* Hide the nav links by default on small screens */
+        flex-direction: column;
+        /* Stack the nav items vertically */
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        background-color: #333;
+        z-index: 10;
+        padding: 0 0;
+    }
+
+    #nav-links.active {
+        display: flex;
+        /* Show nav links when hamburger is active */
+    }
+
+    #nav-links li {
+   
+        width: 100%; /* Ensure <li> takes full width */
+    }
+
+    #nav-links li a {
+        display: block; /* Make the link fill the whole <li> */
+        padding: 1rem; /* Adjust padding for better clickability */
+        text-align: center; /* Center text */
+    }
+
+    /* Add a full-width border on hover */
+    #nav-links li:hover {
+        border-top: 2px solid black; /* Add a top border */
+        border-bottom: 2px solid black; /* Add a bottom border */
+    }
+}
