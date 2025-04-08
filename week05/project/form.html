@@ -1,0 +1,76 @@
+<!-- form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Product Review Form</h1>
+        <p>Please provide your review for the product.</p>
+    </header>
+    <form action="review.html" method="get" id="review-form">
+        <!-- Product Name -->
+        <label for="product-name">Product Name</label>
+        <select id="product-name" name="product-name" required>
+            <option value="" disabled selected>Select a Product ...</option>
+            <option value="fc-1888">Flux Capacitor</option>
+            <option value="fc-2050">Power Laces</option>
+            <option value="fs-1987">Time Circuits</option>
+            <option value="ac-2000">Low Voltage Reactor</option>
+            <option value="jj-1969">Warp Equalizer</option>
+        </select>
+        <!-- Overall Rating -->
+        <label>Overall Rating</label>
+        <div id="rating-group">
+            <div class="stars">
+                <label>
+                    ☆
+                    <input type="radio" name="rating" value="1" required>
+                </label>
+                <label>
+                    ☆☆
+                    <input type="radio" name="rating" value="2" required>
+                </label>
+                <label>
+                    ☆☆☆
+                    <input type="radio" name="rating" value="3" required>
+                </label>
+                <label>
+                    ☆☆☆☆
+                    <input type="radio" name="rating" value="4" required>
+                </label>
+                <label>
+                    ☆☆☆☆☆
+                    <input type="radio" name="rating" value="5" required>
+                </label>
+            </div>
+        </div>
+        <!-- Date of Installation -->
+        <label for="install-date">Date of Installation</label>
+        <input type="date" id="install-date" name="install-date" required>
+        <!-- Useful Features -->
+        <label>Useful Features (Check all that apply)</label>
+        <label><input type="checkbox" name="features" value="feature1"> Increased Efficiency</label>
+        <label><input type="checkbox" name="features" value="feature2"> Time Saving</label>
+        <label><input type="checkbox" name="features" value="feature3"> User-Friendly Interface</label>
+        <label><input type="checkbox" name="features" value="feature4"> Long Battery Life</label>
+        <label><input type="checkbox" name="features" value="feature5"> Compact Design</label>
+        <!-- Written Review -->
+        <label for="review">Written Review</label>
+        <textarea id="review" name="review" placeholder="Write your review here..."></textarea>
+        <!-- User Name -->
+        <label for="username">Your Name (Optional)</label>
+        <input type="text" id="username" name="username" placeholder="Enter your name (Optional)">
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Review">
+    </form>
+    <footer>
+        <p>&copy; 2025 Product Reviews - BYU-I</p>
+    </footer>
+    <script src="scripts/form.js"></script>
+</body>
+</html>

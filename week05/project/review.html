@@ -1,0 +1,37 @@
+<!-- review.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submission Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Review Submission Confirmation</h1>
+    </header>
+
+    <main>
+        <p>Thank you for submitting your review!</p>
+        <p>Your review for the product has been successfully recorded.</p>
+        <p>Total reviews submitted: <span id="review-count">0</span></p>
+        <p>We appreciate your feedback and hope you enjoy your product!</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Product Reviews - BYU-I</p>
+    </footer>
+
+    <script>
+        // Get the current review count from localStorage and update the page
+        const reviewCount = localStorage.getItem("reviewCount") || 0;
+        document.getElementById("review-count").textContent = reviewCount;
+    </script>
+
+</body>
+
+</html>
