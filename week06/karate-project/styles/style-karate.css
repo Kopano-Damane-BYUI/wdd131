@@ -1,0 +1,817 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #001f3d;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+header .nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header .nav ul li {
+    margin-right: 20px;
+}
+
+header .nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* Hide the nav toggle by default */
+.nav-toggle {
+    font-size: 30px;
+    display: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.hero-overlay h1 {
+    font-size: 60px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+.hero-overlay p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #FF6B6B;
+    color: #000000;
+    padding: 15px 30px;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+/* About Section */
+.about {
+    background-color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #001f3d;
+}
+
+.about p {
+    font-size: 22px;
+    line-height: 1.8;
+}
+
+.about-image img {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* About Content Layout - NEW */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    color: #001f3d;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 22px;
+    line-height: 1.8;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Classes Section (Carousel) */
+.classes {
+    text-align: center;
+    padding: 50px;
+    background-color: #e9f7fe;
+}
+
+.classes h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    gap: 10px;
+}
+
+.carousel-item {
+    position: relative;
+    max-width: 300px;
+}
+
+.carousel-item img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item:hover img {
+    transform: scale(1.05);
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Video Section */
+.video {
+    background-color: #001f3d;
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+.video h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Promotions Section */
+.promotions {
+    text-align: center;
+    padding: 50px;
+    background-color: #f7f7f7;
+}
+
+.promotions h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #001f3d;
+}
+
+.promotions p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #001f3d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+    header .nav ul {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    
+    .nav.active ul {
+        display: block;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        left: 0;
+        background-color: #001f3d;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        z-index: 1000;
+        /* Ensures it sits above other elements */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav.active ul li {
+        margin-bottom: 15px;
+    }
+
+    .nav.active ul li a {
+        font-size: 20px;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .hero-overlay h1 {
+        font-size: 40px;
+    }
+
+    .hero-overlay p {
+        font-size: 18px;
+    }
+
+    .about h2 {
+        font-size: 30px;
+    }
+
+    .about p {
+        font-size: 18px;
+    }
+
+    .carousel {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .carousel-item {
+        margin-bottom: 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image img {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
+
+/* =============================== */
+/* === Schedule Page Styles === */
+/* =============================== */
+
+.filter-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.filter-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #001f3d;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filter-buttons button {
+    background-color: #FF6B6B;
+    color: #000000;
+    padding: 6px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button.active {
+    background-color: blue;
+    color: white;
+}
+
+.schedule {
+    padding: 50px 20px;
+    background-color: #f7f7f7;
+}
+
+.schedule-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.class-card {
+    background-color: white;
+    padding: 20px;
+    width: 260px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.class-card h3 {
+    font-size: 20px;
+    color: #001f3d;
+    margin-bottom: 10px;
+}
+
+.class-card p {
+    font-size: 14px;
+    color: #444;
+}
+
+/* Special layout when only one card is visible */
+.schedule-container.single-visible .class-card {
+    flex: 1 1 100%;
+    max-width: 700px;
+    padding: 40px;
+    font-size: 18px;
+    border: 2px solid #001f3d;
+    background-color: #fff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.schedule-container.single-visible .class-card h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.schedule-container.single-visible .class-card p {
+    font-size: 18px;
+}
+
+/* Instructors Section */
+.team {
+    padding: 60px 30px;
+    background-color: #fdfdfd;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    color: #001f3d;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background-color: red;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.instructor-profile {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.instructor-profile:hover {
+    transform: translateY(-5px);
+}
+
+.instructor-profile img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.profile-details {
+    padding: 20px;
+    text-align: left;
+}
+
+.profile-details h3 {
+    font-size: 22px;
+    color: #001f3d;
+    margin-bottom: 10px;
+}
+
+.profile-details p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #444;
+}
+
+.rank {
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.rank.gold {
+    color: black;
+}
+
+.rank.silver {
+    color: black;
+}
+
+.rank.bronze {
+    color: black;
+}
+
+/* Instructor Section */
+.instructor-section {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+}
+
+.instructor-section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #001f3d;
+}
+
+.instructor-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* Default to 1 column */
+    gap: 10px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+.instructor-profile {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.instructor-profile img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.instructor-profile h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #001f3d;
+}
+
+.instructor-profile p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.instructor-profile button {
+    background-color: #001f3d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.instructor-profile button:hover {
+    background-color: red;
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    .instructor-grid {
+        grid-template-columns: repeat(1, 1fr);
+        /* 1 column for smallest screens */
+    }
+
+    .instructor-profile {
+        width: 100%;
+        /* Full width on small screens */
+        max-width: 100%;
+        /* Ensure no overflow */
+        margin: 0 auto;
+        /* Center the cards */
+    }
+
+    .instructor-profile h3 {
+        font-size: 20px;
+        /* Slightly smaller font size */
+    }
+
+    .instructor-profile p {
+        font-size: 14px;
+        /* Smaller text for better readability */
+    }
+}
+
+/* Tablet/Medium Screen Styles */
+@media (min-width: 481px) and (max-width: 768px) {
+    .instructor-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns for medium screens */
+    }
+
+    .instructor-profile {
+        width: 100%;
+        /* Ensure the cards are responsive */
+        max-width: 100%;
+    }
+}
+
+/* Desktop/Large Screen Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .instructor-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columns for larger screens */
+    }
+}
+
+/* Large Screens and Beyond */
+@media (min-width: 1025px) {
+    .instructor-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* Keep 3 columns for very large screens */
+    }
+}
+
+/* ===== Modal Styles ===== */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+    color: #001f3d;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+
+/* Contact page */
+
+.contact {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    background-color: #fdfdfd;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+    grid-column: span 2;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #b71c1c;
+}
+
+.contact-details,
+.contact-form {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-details h3,
+.contact-form h3 {
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.contact-details p,
+.contact-details ul {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.contact-details a {
+    color: black;
+    text-decoration: none;
+}
+
+.contact-details iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 12px;
+    margin-top: 1rem;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #222;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #d32f2f;
+    outline: none;
+}
+
+.contact-form button {
+    background-color: darkblue;
+    color: white;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: white;
+    color: #000000;
+    border: solid 1px black;
+}
+
+@media (max-width: 900px) {
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        grid-column: span 1;
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Description for SEO -->
+    <meta name="description"
+        content="Meet our experienced Goju-kai Karate instructors. Learn from masters who live the values of discipline, respect, and strength.">
+    <!-- Author Meta Tag -->
+    <meta name="author" content="Kopano Damane" />
+    <title>Instructors | Goju-kai Karate Gym</title>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles/style-karate.css" />
+    <!-- External Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- JavaScript File -->
+    <script defer src="scripts/script.js"></script>
+</head>
+<body>
+    <!-- Header from index.html -->
+    <header>
+        <div class="logo">Instructors | Goju-kai Karate Gym</div>
+        <div class="nav-toggle" id="nav-toggle">&#9776;</div>
+        <nav class="nav" id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html">Class Schedule</a></li>
+                <li><a href="instructors.html" class="active">Instructors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Instructors section -->
+    <section class="team">
+        <h2 class="section-title">Meet Our Instructors</h2>
+
+        <div class="instructor-grid">
+            <!-- Instructor 1 -->
+            <div class="instructor-profile">
+                <img src="images/karate-sensei1.webp"
+                    alt="Sensei Hiroshi">
+                <div class="profile-details">
+                    <h3>Sensei Hiroshi Tanaka</h3>
+                    <p class="rank gold">6th Dan Black Belt</p>
+                    <p>Master of Kata, Kumite, and Self-defense.</p>
+                    <button class="read-more" onclick="openModal('hiroshi')">Read More</button>
+                </div>
+            </div>
+            <!-- Instructor 2 -->
+            <div class="instructor-profile">
+                <img src="images/karate-sensei4.webp"
+                    alt="Senpai Akira">
+                <div class="profile-details">
+                    <h3>Senpai Akira Sato</h3>
+                    <p class="rank silver">4th Dan Black Belt</p>
+                    <p>Specialist in Kumite and Cardio Karate.</p>
+                    <button class="read-more" onclick="openModal('akira')">Read More</button>
+                </div>
+            </div>
+            <!-- Instructor 3 -->
+            <div class="instructor-profile">
+                <img src="images/karate-sensei2.webp"
+                    alt="Senpai Haruto">
+                <div class="profile-details">
+                    <h3>Senpai Haruto Yamada</h3>
+                    <p class="rank bronze">3rd Dan Black Belt</p>
+                    <p>Focuses on Self-defense and Kids Karate.</p>
+                    <button class="read-more" onclick="openModal('haruto')">Read More</button>
+                </div>
+            </div>
+            <!-- Instructor 4 -->
+            <div class="instructor-profile">
+                <img src="images/karate-sensei3.jpeg"
+                    alt="Senpai Riko">
+                <div class="profile-details">
+                    <h3>Senpai Riko Matsuda</h3>
+                    <p class="rank bronze">2nd Dan Black Belt</p>
+                    <p>Teaches Kata and beginner-level students.</p>
+                    <button class="read-more" onclick="openModal('riko')">Read More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Modals -->
+    <div class="modal" id="modal-hiroshi">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('hiroshi')">&times;</span>
+            <h3>Sensei Hiroshi Tanaka</h3>
+            <p>With over 30 years of experience, Sensei Hiroshi began his journey in Okinawa under the tutelage of
+                Grandmaster Fujita. He has competed internationally, bringing home multiple gold medals in Kata. His
+                philosophy centers on inner balance, discipline, and pushing limits with grace.</p>
+        </div>
+    </div>
+    <div class="modal" id="modal-akira">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('akira')">&times;</span>
+            <h3>Senpai Akira Sato</h3>
+            <p>Senpai Akira is a fierce Kumite champion known for his explosive speed and footwork. A mentor to many, he
+                believes in conditioning both mind and body. He’s passionate about cardio training as a foundation for
+                defense and confidence.</p>
+        </div>
+    </div>
+    <div class="modal" id="modal-haruto">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('haruto')">&times;</span>
+            <h3>Senpai Haruto Yamada</h3>
+            <p>From a shy child to a confident fighter, Haruto’s transformation through karate is inspiring. He
+                specializes in practical self-defense techniques and empowering young kids with respect and resilience.
+            </p>
+        </div>
+    </div>
+    <div class="modal" id="modal-riko">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('riko')">&times;</span>
+            <h3>Senpai Riko Matsuda</h3>
+            <p>Riko is a Kata technician with a love for perfection in form. Her calm yet firm teaching style makes her
+                a favorite among beginners. She mentors with patience and precision, building a strong foundation in her
+                students.</p>
+        </div>
+    </div>
+    <!-- Footer from index.html -->
+    <footer>
+        <p>Follow us on social media | <a href="credits.html">Credits</a></p>
+    </footer>
+</body>
+</html>

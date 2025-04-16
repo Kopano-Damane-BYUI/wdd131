@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character Encoding -->
+    <meta charset="UTF-8" />
+    <!-- Viewport for Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Page Title -->
+    <title>Class Schedule | Goju-kai Karate Gym</title>
+    <!-- Meta Description for SEO -->
+    <meta name="description"
+        content="Check out our Goju-kai Karate class schedule. Filter by level and find the perfect class to match your training goals." />
+    <!-- Author -->
+    <meta name="author" content="Kopano Damane" />
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="styles/style-karate.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- JavaScript for Filtering and Interactivity -->
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Schedule | Goju-kai Karate Gym</div>
+        <div class="nav-toggle" id="nav-toggle">&#9776;</div>
+        <nav class="nav" id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html" class="active">Class Schedule</a></li>
+                <li><a href="instructors.html">Instructors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Schedule Filter Buttons -->
+    <section class="filter-section">
+        <h2>Filter by Level</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="beginner">Beginner</button>
+            <button class="filter-btn" data-filter="intermediate">Intermediate</button>
+            <button class="filter-btn" data-filter="advanced">Advanced</button>
+            <button class="filter-btn" data-filter="kata">Kata</button>
+            <button class="filter-btn" data-filter="kumite">Kumite</button>
+            <button class="filter-btn" data-filter="full-contact">Full-contact</button>
+            <button class="filter-btn" data-filter="self-defense">Self-defense</button>
+            <button class="filter-btn" data-filter="master">Master Classes</button>
+            <button class="filter-btn" data-filter="bunkai">Bunkai</button>
+        </div>
+    </section>
+    <!-- Schedule Grid -->
+    <section class="schedule">
+        <div class="schedule-container">
+            <div class="class-card beginner">
+                <h3>Beginner Karate</h3>
+                <p>Monday & Wednesday - 5:00 PM</p>
+            </div>
+            <div class="class-card intermediate">
+                <h3>Intermediate Training</h3>
+                <p>Tuesday & Thursday - 6:00 PM</p>
+            </div>
+            <div class="class-card advanced">
+                <h3>Advanced Combat</h3>
+                <p>Friday - 7:00 PM</p>
+            </div>
+            <div class="class-card kata">
+                <h3>Kata Practice</h3>
+                <p>Saturday - 10:00 AM</p>
+                <p>Focus on forms, flow, and precise movements essential for belt advancement.</p>
+            </div>
+            <div class="class-card kumite">
+                <h3>Kumite Training</h3>
+                <p>Saturday - 4:00 PM</p>
+                <p>Learn drills, timing, and explosiveness while building strength and balance.</p>
+            </div>
+            <div class="class-card full-contact">
+                <h3>Full-contact Training</h3>
+                <p>Wednesday - 8:00 PM</p>
+            </div>
+            <div class="class-card self-defense">
+                <h3>Self-defense Techniques</h3>
+                <p>Monday - 6:00 PM</p>
+            </div>
+            <div class="class-card master">
+                <h3>Master Class</h3>
+                <p>Saturday - 2:00 PM</p>
+            </div>
+            <div class="class-card bunkai">
+                <h3>Bunkai Application</h3>
+                <p>Thursday - 5:00 PM</p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p>Follow us on social media | <a href="credits.html">Credits</a></p>
+    </footer>
+</body>
+</html>
